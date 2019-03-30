@@ -13,7 +13,7 @@
 	<link rel="stylesheet prefetch" href="style.css" />
 </head>
 
-<body>
+<body onscroll="topAnimate()">
 	<header id="header">
 		<div class="wrapper-size">
 			<div class="logo-area">
@@ -56,16 +56,45 @@
 			</nav>
 		</div>
 	</header>
-	<div id="visual" class="visual-top">
-		<div class="video-wrapper">
-			<video preload="none" width="960" height="540" muted="" autoplay>
-		        <source src="inc/img/top/top.mp4">
-		    </video>
-	    </div>
-	</div>
+	<div id="visual" class="visual-top"></div>
 	<main id="contact">
 		<div class="wrapper-size">
-			<h2>about POINT･LINE</h2>
+			<div class="catch-area">
+				<div class="catch-left">
+					<h2>About<br>POINT･LINE</h2>
+				</div>
+				<div class="catch-right">
+					<p>
+						<span>万物は点の集合から成り立っていると言われています。</span>
+						<br>
+						<span>無数にある点を線でつなぐ</span>
+						<strong>創造力</strong>
+						<span>。そして人と人を結ぶ</span>
+						<strong>人間力</strong>
+						<span>。</span>
+					</p>
+					<div class="big-catch">ポイントラインは、</div>
+					<p class="mar_top0">この「創造力と人間力」を追い求め、<br>展示会に出展されるお客様の最終目的の達成に貢献いたします。</p>
+				</div>
+			</div>
+			<div class="service-title">
+				<h2>展示会</h2>
+				<div class="subtitle">EXHIBITION</div>
+			</div>
+			<div class="slider-area">
+				<img id="sliderImage" src="inc/img/top/slide1.jpg" alt="展示会1" width="80%" />
+				<div class="slider-text">
+					<h4 id="sliderTitle">ビューティーワールド</h4>
+					<span id="sliderLocation">東京ビックサイトにて開催</span>
+					<div class="slider-footer">
+						<a href="service/exhibition.html" class="slider-button">READ MORE</a>
+						<div class="slider-control">
+							<i class="fa fa-caret-left fa-3x" onclick="goPrev()"></i>
+							<i class="fa fa-caret-right fa-3x" onclick="goNext()"></i>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</main>
 	<footer id="footer"></footer>
