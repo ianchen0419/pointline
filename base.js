@@ -1,11 +1,3 @@
-function topAnimate(){
-	if(window.scrollY>500){
-		visual.classList.add('stop');
-	}else{
-		visual.classList.remove('stop');
-	}
-}
-
 var slideData=[{
 	title: 'ビューティーワールド',
 	location: '東京ビックサイト'
@@ -30,8 +22,6 @@ function sliderMove(){
 	sliderImage.classList.add('hide1');
 
 	sliderImage.src='inc/img/top/slide'+imgIndex+'.jpg';
-	sliderTitle.textContent=slideData[slideIndex].title;
-	sliderLocation.textContent=slideData[slideIndex].location+'にて開催';
 	
 	setTimeout(function(){
 		sliderTitle.classList.add('hide2');
@@ -40,6 +30,8 @@ function sliderMove(){
 	},300);
 
 	setTimeout(function(){
+		sliderTitle.textContent=slideData[slideIndex].title;
+		sliderLocation.textContent=slideData[slideIndex].location+'にて開催';
 		sliderTitle.className='';
 		sliderLocation.className='';
 		sliderImage.className='';

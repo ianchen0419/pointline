@@ -13,27 +13,27 @@
 	<link rel="stylesheet prefetch" href="style.css" />
 </head>
 
-<body onscroll="topAnimate()">
+<body>
 	<header id="header">
 		<div class="wrapper-size">
 			<div class="logo-area">
-				<a href="index.html">
+				<a href="/index.html">
 					<img src="inc/img/top/logo.png" alt="ポイントライン" height="60" />
 				</a>
 			</div>
 			<nav id="menu">
 				<ul>
 					<li>
-						<a href="index.html">ホーム</a>
+						<a href="/index.html">ホーム</a>
 					</li>
 					<li>
-						<a href="concept.html">コンセプト</a>
+						<a href="/concept.html">コンセプト</a>
 					</li>
 					<li>
-						<a href="service.html">サービス</a>
+						<a href="/service.html">サービス</a>
 					</li>
 					<li>
-						<a href="company.html">会社案内</a>
+						<a href="/company.html">会社案内</a>
 					</li>
 					<li class="dropdown-wrapper">
 						<span>Languague</span>
@@ -50,13 +50,21 @@
 						</ul>
 					</li>
 					<li class="orange-list">
-						<a href="contact.html">お問い合わせ</a>
+						<a href="/contact.html">お問い合わせ</a>
 					</li>
 				</ul>
 			</nav>
 		</div>
 	</header>
-	<div id="visual" class="visual-top"></div>
+	<div id="visual" class="visual-top">
+		<div class="wrapper-size">
+			<div id="videoWrapper">
+				<video preload="none" width="960" height="540" muted autoplay onended="videoWrapper.classList.add('stop')">
+					<source src="inc/img/top/top.mp4">
+				</video>
+			</div>
+		</div>
+	</div>
 	<main id="contact">
 		<div class="wrapper-size">
 			<div class="catch-area">
@@ -106,24 +114,68 @@
 			</div>
 			<div class="service-area">
 				<div class="service-item">
-					<i class="fa fa-file-image-o fa-5x fa-fw"></i>
+					<img src="inc/img/top/graphics.png" alt="グラフィック" width="150" />
+					<div class="button">
+						<a href="service/graphics.html" class="red-button">詳しく見る</a>
+					</div>
 					<h4>グラフィック</h4>
-					<p>パネル・パンフレット・ポスター</p>
+					<p>パネル・パンフレット・<br>ポスター</p>
 				</div>
 				<div class="service-item">
-					<i class="fa fa-desktop fa-5x fa-fw"></i>
+					<img src="inc/img/top/web.png" alt="WEB" width="150" />
+					<div class="button">
+						<a href="service/web.html" class="black-button">詳しく見る</a>
+					</div>
 					<h4>WEB</h4>
-					<p>ホームページ・ランディングページ</p>
+					<p>ホームページ・<br>ランディングページ</p>
 				</div>
 				<div class="service-item">
-					<i class="fa fa-video-camera fa-5x fa-fw"></i>
+					<img src="inc/img/top/video.png" alt="映像・動画" width="150" />
+					<div class="button">
+						<a href="service/movie.html" class="yellow-button">詳しく見る</a>
+					</div>
 					<h4>映像・動画</h4>
 					<p>プロモーション動画</p>
 				</div>
 			</div>
+			<div class="service-title">
+				<h2>ソーシャルメディア</h2>
+				<div class="subtitle">SNS</div>
+			</div>
+			<div class="sns-area">
+				<p>ポイントライン公式Facebook、Instagramでは<br>展示会の写真を紹介しています。</p>
+				<div class="sns-icons">
+					<a href="https://www.facebook.com/Point.Line100/" target="_blank">
+						<i class="fa fa-facebook-square fa-3x"></i>
+					</a>
+					<a href="" target="_blank">
+						<div class="instagram-wrapper">
+							<i class="fa fa-instagram fa-3x"></i>
+						</div>
+					</a>
+				</div>
+			</div>
+
 		</div>
 	</main>
-	<footer id="footer"></footer>
+	<footer id="footer">
+		<div class="wrapper-size">
+			<div class="sitemap-area">
+				<div class="logo">
+					<a href="/index.html">
+						<img src="inc/img/top/logo.png" alt="ポイントライン" height="60" />
+					</a>
+				</div>
+				<div class="links">
+					<a href="/partner.html">業務パートナー募集</a>
+					<a href="/sitemap.html">サイトマップ</a>
+					<a href="/privacy-policy.html">プライバシーポリシー</a>
+				</div>
+			</div>
+			<div class="address-area">株式会社ポイントライン  Point-Line Co., Ltd.<br>東京都中央区日本橋本町4-7-10 H.R.Net日本橋ビル3F  TEL. 03-5204-0523</div>
+		</div>
+		<div class="copyright-area">Copyright  POINTLINE Inc.  All Rights Reserved.</div>
+	</footer>
 
 	<script src="base.js"></script>
 </body>
