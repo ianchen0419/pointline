@@ -18,17 +18,20 @@ var slideData=[{
 }];
 
 var slideIndex=0;
+var dots=document.querySelectorAll('.dots-area i');
 
 function sliderMove(){
+	var activeDot=document.querySelector('.dots-area i.active');
+	activeDot.classList.remove('active');
+
 	var imgIndex=slideIndex+1;
 	sliderTitle.classList.add('hide1');
 	sliderLocation.classList.add('hide1');
 	sliderImage.classList.add('hide1');
 
 	sliderImage.src='inc/img/top/slide'+imgIndex+'.jpg';
-	sliderImage.alt='展示会'+imgIndex;
 	sliderTitle.textContent=slideData[slideIndex].title;
-	sliderLocation.textContent=slideData[slideIndex].location;
+	sliderLocation.textContent=slideData[slideIndex].location+'にて開催';
 	
 	setTimeout(function(){
 		sliderTitle.classList.add('hide2');
@@ -40,6 +43,7 @@ function sliderMove(){
 		sliderTitle.className='';
 		sliderLocation.className='';
 		sliderImage.className='';
+		dots[slideIndex].classList.add('active');
 	},500);
 }
 
@@ -58,5 +62,10 @@ function goPrev(){
 	}else{
 		slideIndex--;
 	}
+	sliderMove();
+}
+
+function changeIndex(idx){
+	slideIndex=idx;
 	sliderMove();
 }
