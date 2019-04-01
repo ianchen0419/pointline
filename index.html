@@ -59,7 +59,7 @@
 	<div id="visual" class="visual-top">
 		<div class="wrapper-size">
 			<div id="videoWrapper">
-				<video preload="none" width="960" height="540" muted autoplay onended="videoWrapper.classList.add('stop')">
+				<video preload="none" width="960" height="540" muted autoplay onended="videoWrapper.classList.add('stop')" onclick="this.pause()">
 					<source src="inc/img/top/top.mp4">
 				</video>
 			</div>
@@ -91,17 +91,8 @@
 			</div>
 			<div class="slider-area">
 				<img id="sliderImage" src="inc/img/top/slide1.jpg" alt="展示会" width="80%" />
-				<div class="slider-text">
-					<h4 id="sliderTitle">ビューティーワールド</h4>
-					<span id="sliderLocation">東京ビックサイトにて開催</span>
-					<div class="slider-footer">
-						<a href="service/exhibition.html" class="slider-button">READ MORE</a>
-						<div class="slider-control">
-							<i class="fa fa-caret-left fa-3x" onclick="goPrev()"></i>
-							<i class="fa fa-caret-right fa-3x" onclick="goNext()"></i>
-						</div>
-					</div>
-				</div>
+				<i class="fa fa-chevron-left fa-3x slider-prev" onclick="goPrev()"></i>
+				<i class="fa fa-chevron-right fa-3x slider-next" onclick="goNext()"></i>
 				<div class="dots-area">
 					<i class="fa fa-circle active" onclick="changeIndex(0)"></i>
 					<i class="fa fa-circle" onclick="changeIndex(1)"></i>
@@ -114,23 +105,23 @@
 			</div>
 			<div class="service-area">
 				<div class="service-item">
-					<img src="inc/img/top/graphics.png" alt="グラフィック" width="150" />
+					<img src="inc/img/top/graphics.png" alt="グラフィック" width="220" />
 					<div class="button">
 						<a href="service/graphics.html" class="red-button">詳しく見る</a>
 					</div>
 					<h4>グラフィック</h4>
-					<p>パネル・パンフレット・<br>ポスター</p>
+					<p>パネル・パンフレット・ポスター</p>
 				</div>
 				<div class="service-item">
-					<img src="inc/img/top/web.png" alt="WEB" width="150" />
+					<img src="inc/img/top/web.png" alt="WEB" width="220" />
 					<div class="button">
 						<a href="service/web.html" class="black-button">詳しく見る</a>
 					</div>
 					<h4>WEB</h4>
-					<p>ホームページ・<br>ランディングページ</p>
+					<p>ホームページ・ランディングページ</p>
 				</div>
 				<div class="service-item">
-					<img src="inc/img/top/video.png" alt="映像・動画" width="150" />
+					<img src="inc/img/top/video.png" alt="映像・動画" width="220" />
 					<div class="button">
 						<a href="service/movie.html" class="yellow-button">詳しく見る</a>
 					</div>
@@ -143,7 +134,7 @@
 				<div class="subtitle">SNS</div>
 			</div>
 			<div class="sns-area">
-				<p>ポイントライン公式Facebook、Instagramでは<br>展示会の写真を紹介しています。</p>
+				<p>ポイントライン公式Facebook、Instagramでは展示会の写真を紹介しています。</p>
 				<div class="sns-icons">
 					<a href="https://www.facebook.com/Point.Line100/" target="_blank">
 						<i class="fa fa-facebook-square fa-3x"></i>

@@ -1,14 +1,3 @@
-var slideData=[{
-	title: 'ビューティーワールド',
-	location: '東京ビックサイト'
-}, {
-	title: 'BioJapan',
-	location: 'パシフィコ横浜'
-}, {
-	title: '東京オートサロン',
-	location: '幕張メッセ'
-}];
-
 var slideIndex=0;
 var dots=document.querySelectorAll('.dots-area i');
 
@@ -17,23 +6,15 @@ function sliderMove(){
 	activeDot.classList.remove('active');
 
 	var imgIndex=slideIndex+1;
-	sliderTitle.classList.add('hide1');
-	sliderLocation.classList.add('hide1');
 	sliderImage.classList.add('hide1');
 
 	sliderImage.src='inc/img/top/slide'+imgIndex+'.jpg';
 	
 	setTimeout(function(){
-		sliderTitle.classList.add('hide2');
-		sliderLocation.classList.add('hide2');
 		sliderImage.classList.add('hide2');
 	},300);
 
 	setTimeout(function(){
-		sliderTitle.textContent=slideData[slideIndex].title;
-		sliderLocation.textContent=slideData[slideIndex].location+'にて開催';
-		sliderTitle.className='';
-		sliderLocation.className='';
 		sliderImage.className='';
 		dots[slideIndex].classList.add('active');
 	},500);
