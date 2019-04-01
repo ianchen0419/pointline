@@ -7,8 +7,6 @@ function sliderMove(){
 
 	var imgIndex=slideIndex+1;
 	sliderImage.classList.add('hide1');
-
-	sliderImage.src='inc/img/top/slide'+imgIndex+'.jpg';
 	
 	setTimeout(function(){
 		sliderImage.classList.add('hide2');
@@ -16,6 +14,7 @@ function sliderMove(){
 
 	setTimeout(function(){
 		sliderImage.className='';
+		sliderImage.src='inc/img/top/slide'+imgIndex+'.jpg';
 		dots[slideIndex].classList.add('active');
 	},500);
 }

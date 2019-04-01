@@ -118,6 +118,10 @@ body {
 	pointer-events: auto;
 }
 
+#menu .dropdown-wrapper:hover span {
+	color: #FF9800;
+}
+
 #menu .dropdown-list li {
 	text-align: center;
 	display: block;
