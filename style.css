@@ -103,6 +103,7 @@ body {
 	padding: 45px 10px 30px 10px;
 	display: inline-block;
 	cursor: pointer;
+	transition-duration: 0.3s;
 }
 
 #menu .dropdown-list {
@@ -142,20 +143,32 @@ body {
 	color: #fff;
 }
 
-.visual-top .wrapper-size {
-	margin-top: 20px;
+#videoWrapper .stop-image {
+	display: none;
 }
 
 #videoWrapper.stop {
-	background: url(inc/img/top/top_stop.png);
-	-webkit-background-size: cover;
-	background-size: cover;
-	width: 960px;
-	height: 540px;
+	position: relative;
+}
+
+#videoWrapper.stop .stop-image {
+	position: absolute;
+    top: 0;
+    z-index: -1;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url(inc/img/top/top_stop.png);
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+video {
+	width: 100vw;
 }
 
 #videoWrapper.stop video {
-	display: none;
+	visibility: hidden;
 }
 
 .catch-area {
