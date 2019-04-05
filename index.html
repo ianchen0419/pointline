@@ -14,48 +14,7 @@
 </head>
 
 <body>
-	<header id="header">
-		<div class="wrapper-size">
-			<div class="logo-area">
-				<a href="/index.html">
-					<img src="inc/img/top/logo.png" alt="ポイントライン" height="60" />
-				</a>
-			</div>
-			<nav id="menu">
-				<ul>
-					<li>
-						<a href="/index.html">ホーム</a>
-					</li>
-					<li>
-						<a href="/concept.html">コンセプト</a>
-					</li>
-					<li>
-						<a href="/service.html">サービス</a>
-					</li>
-					<li>
-						<a href="/company.html">会社案内</a>
-					</li>
-					<li class="dropdown-wrapper">
-						<span>Languague</span>
-						<ul class="dropdown-list">
-							<li>
-								<a href="javascript:;">English</a>
-							</li>
-							<li>
-								<a href="javascript:;">繁體中文</a>
-							</li>
-							<li>
-								<a href="javascript:;">简体中文</a>
-							</li>
-						</ul>
-					</li>
-					<li class="orange-list">
-						<a href="/contact.html">お問い合わせ</a>
-					</li>
-				</ul>
-			</nav>
-		</div>
-	</header>
+	<header id="header"></header>
 	<div id="visual" class="visual-top">
 		<div id="videoWrapper">
 			<video preload="none" muted autoplay onended="videoWrapper.classList.add('stop')">
@@ -89,7 +48,9 @@
 				<div class="subtitle">EXHIBITION</div>
 			</div>
 			<div class="slider-area">
-				<img id="sliderImage" src="inc/img/top/slide1.jpg" alt="展示会" width="80%" />
+				<a href="service/exhibition.html">
+					<img id="sliderImage" src="inc/img/top/slide1.jpg" alt="展示会" width="80%" />
+				</a>
 				<i class="fa fa-chevron-left fa-3x slider-prev" onclick="goPrev()"></i>
 				<i class="fa fa-chevron-right fa-3x slider-next" onclick="goNext()"></i>
 				<div class="dots-area">
@@ -97,7 +58,11 @@
 					<i class="fa fa-circle" onclick="changeIndex(1)"></i>
 					<i class="fa fa-circle" onclick="changeIndex(2)"></i>
 				</div>
+				<div class="right-text mar_top20">
+					<a href="service/exhibition.html" class="red-button">詳しく見る</a>
+				</div>
 			</div>
+			
 			<div class="service-title">
 				<h2>その他サービス</h2>
 				<div class="subtitle">OTHER SERVICE</div>
@@ -109,12 +74,12 @@
 						<a href="service/graphics.html" class="red-button">詳しく見る</a>
 					</div>
 					<h4>グラフィック</h4>
-					<p>パネル・パンフレット・ポスター</p>
+					<p>パネル・パンフレット</p>
 				</div>
 				<div class="service-item">
 					<img src="inc/img/top/web.png" alt="WEB" width="220" />
 					<div class="button">
-						<a href="service/web.html" class="black-button">詳しく見る</a>
+						<a href="service/web.html" class="red-button">詳しく見る</a>
 					</div>
 					<h4>WEB</h4>
 					<p>ホームページ・ランディングページ</p>
@@ -122,7 +87,7 @@
 				<div class="service-item">
 					<img src="inc/img/top/video.png" alt="映像・動画" width="220" />
 					<div class="button">
-						<a href="service/movie.html" class="yellow-button">詳しく見る</a>
+						<a href="service/movie.html" class="red-button">詳しく見る</a>
 					</div>
 					<h4>映像・動画</h4>
 					<p>プロモーション動画</p>
@@ -148,25 +113,7 @@
 
 		</div>
 	</main>
-	<footer id="footer">
-		<div class="wrapper-size">
-			<div class="sitemap-area">
-				<div class="logo">
-					<a href="/index.html">
-						<img src="inc/img/top/logo.png" alt="ポイントライン" height="60" />
-					</a>
-				</div>
-				<div class="links">
-					<a href="/partner.html">業務パートナー募集</a>
-					<a href="/sitemap.html">サイトマップ</a>
-					<a href="/privacy-policy.html">プライバシーポリシー</a>
-				</div>
-			</div>
-			<div class="address-area">株式会社ポイントライン  Point-Line Co., Ltd.<br>東京都中央区日本橋本町4-7-10 H.R.Net日本橋ビル3F  TEL. 03-5204-0523</div>
-		</div>
-		<div class="copyright-area">Copyright Point-Line Co., Ltd.  All Rights Reserved.</div>
-	</footer>
-
+	<footer id="footer"></footer>
 	<script src="base.js"></script>
 </body>
 </html>
