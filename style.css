@@ -296,6 +296,7 @@ video {
 .service-item h4 {
 	margin-bottom: 0;
 	font-size: 18px;
+	height: 27px;
 }
 
 .service-item p {
@@ -411,7 +412,7 @@ video {
 	position: relative;
 }
 
-.white-title {
+.white-header {
 	position: absolute;
     top: 0;
     background: rgba(255, 255, 255, 0.8);
@@ -419,16 +420,22 @@ video {
     left: 10%;
     width: 200px;
     text-align: center;
-    padding: 80px 0;
     box-sizing: border-box;
 }
 
-.white-title .en-title {
+.white-header .text-wrapper {
+	position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.white-header .en-title {
 	font-size: 30px;
     font-weight: bold;
 }
 
-.white-title h1 {
+.white-header h1 {
 	margin: 0;
     font-size: 18px;
     font-weight: normal;
@@ -465,6 +472,81 @@ video {
 
 .right-text {
 	text-align: right;
+}
+
+.concept-item {
+	margin: 100px 0;
+}
+
+.concept-item img {
+	vertical-align: middle;
+	margin-right: 40px;
+}
+
+.concept-text {
+	width: 55%;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.concept-text h4 {
+	font-size: 20px;
+}
+
+.service-wrapper {
+	text-align: center;
+	margin-top: 60px;
+}
+
+.service-block {
+	display: inline-block;
+	vertical-align: top;
+	margin: 40px;
+}
+
+.service-block a {
+	display: inline-block;
+	position: relative;
+}
+
+.service-text {
+	background: rgba(249, 222, 211, 0.8);
+    text-align: center;
+    padding: 10px 0;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+.service-text .en {
+	font-weight: bold;
+	color: #ea613b;
+}
+
+.service-text h4 {
+	margin: 0;
+	color: #ea613b;
+}
+
+.orange-header {
+    background-color: #f9ded3;
+    background-image: linear-gradient(45deg, #fff 25%, #fff 25%, transparent 25%, transparent 75%, #fff 75%, #fff 75%),linear-gradient(-135deg, #fff 25%, #fff 25%, transparent 25%, transparent 75%, #fff 75%, #fff 75%);
+    background-position: 0 0, 3px 3px;
+    background-repeat: repeat;
+    background-size: 6px 6px;
+    text-align: center;
+    padding: 25px 0;
+}
+
+.orange-header .en-title {
+	color: #444;
+	font-size: 40px;
+	font-weight: bold;
+}
+
+.orange-header h1 {
+	margin: 0;
+	font-size: 20px;
 }
 
 @-webkit-keyframes show {
