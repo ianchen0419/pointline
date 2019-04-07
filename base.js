@@ -25,12 +25,19 @@ footerXhr.onreadystatechange=function(){
 
 
 function menuHighlight(){
-	var visitedMenu=document.querySelector('nav a[href*="' + nowPath + '"]');
-
-	if(visitedMenu){
-		visitedMenu.closest('li').classList.add('active');
-	}else{
-		document.querySelector('nav ul li').classList.add('active');
+	var menuList=document.querySelectorAll('nav li');
+	if(nowPath==='' || nowPath==='index.html'){
+		menuList[0].classList.add('active');
+	}else if(nowPath==='concept.html'){
+		menuList[1].classList.add('active');
+	}else if(nowPath==='exhibition.html'){
+		menuList[2].classList.add('active');
+	}else if(nowPath==='3d-image.html' || nowPath==='graphics.html' || nowPath==='web.html' || nowPath==='movie.html' || nowPath==='illustration.html'){
+		menuList[3].classList.add('active');
+	}else if(nowPath==='company.html'){
+		menuList[4].classList.add('active');
+	}else if(nowPath==='contact.html'){
+		menuList[6].classList.add('active');
 	}
 }
 
@@ -79,11 +86,87 @@ function changeIndex(idx){
 	sliderMove();
 }
 
-setInterval(function(){
-	if(slideIndex==2){
-		slideIndex=0;
+if(window['sliderImage']){
+	setInterval(function(){
+		if(slideIndex==2){
+			slideIndex=0;
+		}else{
+			slideIndex++;
+		}
+		sliderMove();
+	}, 3000);
+}
+
+var galleryIndex=0;
+
+function openGallery(idx){
+	galleryIndex=idx;
+	runGallery();
+	setTimeout(function(){
+		gallerySlider.classList.add('show');
+	}, 200)
+
+}
+
+function galleryPrev(){
+	if(galleryIndex==0){
+		return;
 	}else{
-		slideIndex++;
+		galleryIndex--;
+		runGallery();
 	}
-	sliderMove();
-}, 3000);
+}
+
+function galleryNext(){
+	if(galleryIndex==8){
+		return;
+	}else{
+		galleryIndex++;
+		runGallery();
+	}
+}
+
+window.addEventListener("keydown", function(e){
+	if(e.keyCode==27){
+		gallerySlider.classList.remove('show')
+	}
+
+	if(gallerySlider.classList.contains('show')){
+		if(e.keyCode==37){
+			galleryPrev();
+		}else if(e.keyCode==39){
+			galleryNext();
+		}
+	}
+})
+
+
+function runGallery(){
+	gallerySliderWrapper.style.transform="translateX(-"+galleryIndex+"00vw)";
+	counterIndex.textContent=galleryIndex+1;
+	dl_btn.setAttribute('href', gallerySliderWrapper.children[galleryIndex].querySelector('img').src);
+}
+
+function makeFull(){
+	if(document.webkitFullscreenElement || document.msRequestFullscreenElement || document.mozRequestFullScreenElement || document.fullscreenElement){
+		if(document.exitFullscreen){
+			document.exitFullscreen();
+		}else if(document.msExitFullscreen){
+			document.msExitFullscreen();
+		}else if(document.mozExitFullScreen){
+			document.mozExitFullScreen();
+		}else if(document.webkitExitFullscreen){
+			document.webkitExitFullscreen();
+		}
+	}else{
+		if(gallerySlider.requestFullscreen){
+			gallerySlider.requestFullscreen();
+		}else if(gallerySlider.msRequestFullscreen){
+			gallerySlider.msRequestFullscreen();
+		}else if(gallerySlider.mozRequestFullScreen){
+			gallerySlider.mozRequestFullScreen();
+		}else if(gallerySlider.webkitRequestFullscreen){
+			gallerySlider.webkitRequestFullscreen();
+		}
+	}
+}
